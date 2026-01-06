@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- State & Config ---
+// State & Config
     const productImages = {
         'original': ['assets/original_perfume_1.jpg', 'assets/original_perfume_2.jpg', 'assets/original_perfume_3.jpg'],
         'rose': ['assets/rose_perfume_1.jpg', 'assets/rose_perfume_2.jpg', 'assets/rose_perfume_3.jpg'],
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const defaultImage = 'assets/original_perfume_1.jpg';
 
 
-    // --- Mobile Menu ---
+    // Mobile Menu 
     const hamburger = document.querySelector('.hamburger-menu');
     const mobileMenu = document.querySelector('.mobile-menu');
     const closeMenu = document.querySelector('.close-menu');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
 
 
-    // --- Subscription Card Toggle Logic ---
+    // Subscription Card Toggle Logic
     const subRadios = document.querySelectorAll('input[name="subscription_type"]');
     const cardSingle = document.getElementById('card-single');
     const cardDouble = document.getElementById('card-double');
@@ -42,12 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     subRadios.forEach(radio => {
         radio.addEventListener('change', handleSubChange);
-        // Also add click listener to header to ensure logic runs if label click doesn't bubble change fast enough
-        // (Radio change event is sufficient usually, but just in case)
     });
-
-
-    // --- Fragrance Logic & "Included" Images ---
 
     // Single Sub Inputs
     const singleFragRadios = document.querySelectorAll('input[name="fragrance_single"]');
@@ -55,13 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     singleFragRadios.forEach(radio => {
         radio.addEventListener('change', (e) => {
-            // Update Included Image
             const val = e.target.value;
-            // Use the first image of the set
             if (dynamicSingleImg && productImages[val]) {
                 dynamicSingleImg.src = productImages[val][0];
             }
-            // Update Main Gallery Link (Optional visual feedback)
             updateGalleryContext(val);
             updateLink();
         });
@@ -91,13 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (dynamicDoubleImg2 && productImages[val]) {
                 dynamicDoubleImg2.src = productImages[val][0];
             }
-            updateGalleryContext(val); // Optional
+            updateGalleryContext(val);
             updateLink();
         });
     });
 
 
-    // --- Gallery Logic (Shared) ---
+    // Gallery Logic
     const mainImage = document.getElementById('main-product-image');
     let currentGallerySet = productImages['original'];
     let currentImageIndex = 0;
@@ -118,9 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
             mainImage.style.opacity = 1;
         }, 200);
 
-        // Update thumbnails contextually?? 
-        // For now, let's keep thumbnails static 'original' set or update them?
-        // Let's update logical thumbnails if they exist
         const thumbs = document.querySelectorAll('.thumbnail');
         thumbs.forEach((thumb, index) => {
             if (currentGallerySet[index]) {
@@ -156,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // --- Link Generation ---
+    // Link Generation
     const addToCartBtn = document.getElementById('add-to-cart-btn');
 
     function updateLink() {
@@ -178,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // --- Collection Accordion ---
+    // Collection Accordion
     const accordionItems = document.querySelectorAll('.accordion-item');
     accordionItems.forEach(item => {
         const header = item.querySelector('.accordion-header');
@@ -201,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // --- Stats Counter ---
+    // Stats Counter
     const statsSection = document.querySelector('.stats-section');
     const statNumbers = document.querySelectorAll('.stat-number');
     let counted = false;
@@ -232,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-    // --- Newsletter Form Logic ---
+    // Newsletter Form Logic
     const newsletterForm = document.querySelector(".newsletter-form");
     if(newsletterForm) {
         newsletterForm.addEventListener("submit", (e) => {
@@ -246,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-// --- Animation Intersection Observer ---
+// Animation Intersection Observer
 document.addEventListener("DOMContentLoaded", () => {
     const observerOptions = {
         root: null,
@@ -258,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // Only animate once
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);

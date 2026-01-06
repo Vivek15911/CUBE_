@@ -15,8 +15,6 @@
 
 <body>
 
-    <!-- Background Image container (handled in CSS mostly, but structure here if needed) -->
-
     <!-- Header -->
     <header class="header transparent-header">
         <div class="container header-container">
@@ -62,7 +60,6 @@
     <main>
         <!-- specific hero section -->
         <section class="hero-section">
-            <!-- Background Image is set via CSS or inline style if dynamic, but CSS is cleaner -->
             <div class="container hero-content">
                 <span class="hero-tag">New Summer Collection</span>
                 <h1 class="hero-title">Live your best life.</h1>
@@ -98,7 +95,6 @@
                         <button class="gallery-arrow next-arrow" aria-label="Next image">&#10095;</button>
                     </div>
                     <div class="gallery-thumbnails">
-                        <!-- Thumbnails will be dynamically selected based on current group -->
                         <img src="assets/original_perfume_1.jpg" alt="Thumbnail 1" class="thumbnail active"
                             data-index="0">
                         <img src="assets/original_perfume_2.jpg" alt="Thumbnail 2" class="thumbnail" data-index="1">
@@ -115,9 +111,7 @@
                         Crafted for those who seek distinction and style.
                     </p>
 
-                    <!-- New Product Options Form (Detailed Subscription UI) -->
                     <form class="product-options-form" id="options-form">
-                        <!-- ... (Rest of form content remains same, just wrapper animated) ... -->
                         <!-- Single Subscription Card -->
                         <div class="sub-card-container active" id="card-single">
                             <!-- Most Popular Banner -->
@@ -171,7 +165,6 @@
                                         <div class="included-box">
                                             <span class="box-title">Every 30 Days</span>
                                             <div class="box-img-container">
-                                                <!-- Dynamic Image based on selection -->
                                                 <img src="assets/original_perfume_1.jpg" alt="Main Bottle"
                                                     class="dynamic-single-img">
                                             </div>
@@ -179,7 +172,6 @@
                                         <div class="included-box">
                                             <span class="box-title">One Time <strong>(Free)</strong></span>
                                             <div class="box-img-container sampler-group">
-                                                <!-- 3 Small Bottles Visual Simulation -->
                                                 <img src="assets/original_perfume_1.jpg" alt="Sampler">
                                                 <img src="assets/lily_perfume_1.jpg" alt="Sampler">
                                                 <img src="assets/rose_perfume_1.jpg" alt="Sampler">
@@ -216,7 +208,7 @@
                                 </div>
                             </label>
 
-                            <!-- Body (Collapsible) -->
+                            <!-- Body -->
                             <div class="sub-card-body">
 
                                 <!-- Choose Fragrance 1 -->
@@ -313,7 +305,7 @@
             </div>
         </section>
 
-        <!-- Our Collection Section (Mosaic/Accordion) -->
+        <!-- Our Collection Section -->
         <section class="collection-section animate-on-scroll">
             <div class="container collection-grid">
                 <div class="collection-content animate-on-scroll delay-100">
@@ -350,13 +342,12 @@
                     </div>
                 </div>
                 <div class="collection-image animate-on-scroll delay-200">
-                    <!-- Using a placeholder or reusing an asset creatively -->
                     <img src="assets/our_collection.png" alt="Collection Image">
                 </div>
             </div>
         </section>
 
-        <!-- Stats Section (Green Bar) -->
+        <!-- Stats Section -->
         <section class="stats-section animate-on-scroll">
             <div class="container stats-grid">
                 <div class="stat-item animate-on-scroll delay-100">

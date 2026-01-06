@@ -1,8 +1,6 @@
 :root {
     --primary-green: #0e300d;
-    /* Deep Green from mockup */
     --accent-green: #00873E;
-    /* Brighter green for banners/buttons */
     --light-green: #e6f0e6;
     --text-color: #1a1a1a;
     --text-light: #ffffff;
@@ -49,7 +47,6 @@ img {
     padding: 0 20px;
 }
 
-/* --- Buttons --- */
 .btn {
     display: inline-block;
     padding: 15px 30px;
@@ -92,7 +89,6 @@ img {
 }
 
 
-/* --- Header --- */
 .header {
     height: 80px;
     display: flex;
@@ -160,7 +156,6 @@ img {
     background-color: var(--primary-green);
 }
 
-/* Mobile Menu */
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -201,9 +196,6 @@ img {
     font-weight: 600;
 }
 
-
-
-/* --- Hero Section --- */
 .hero-section {
     height: 100vh;
     min-height: 600px;
@@ -257,8 +249,6 @@ img {
     margin-top: 5px;
 }
 
-
-/* --- Product Section --- */
 .product-section {
     padding: 80px 0;
     background-color: var(--white);
@@ -271,7 +261,6 @@ img {
     align-items: start;
 }
 
-/* Gallery */
 .product-gallery .main-image-container {
     background-color: #f5f5f5;
     border-radius: 10px;
@@ -281,7 +270,6 @@ img {
     align-items: center;
     justify-content: center;
     position: relative;
-    /* Arrows styling could be added here if needed */
 }
 
 .main-img {
@@ -335,10 +323,8 @@ img {
     right: 20px;
 }
 
-/* Product Details */
 .product-title {
     font-family: var(--font-body);
-    /* Bold sans-serif as per mockup */
     font-size: 2rem;
     font-weight: 700;
     color: var(--primary-green);
@@ -363,8 +349,6 @@ img {
     font-size: 0.95rem;
 }
 
-
-/* --- Subscription UI Cards --- */
 .sub-card-container {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -373,33 +357,28 @@ img {
     transition: all 0.3s ease;
     background: #fff;
     opacity: 0.6;
-    /* Grayed out when inactive */
 }
 
 .sub-card-container.active {
     border-color: #ccc;
-    /* Or green if desired, mockup shows subtle border */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     opacity: 1;
 }
 
 .most-popular-banner {
     background-color: var(--accent-green);
-    /* Green banner */
     color: #fff;
     text-align: center;
     font-weight: 700;
     padding: 8px;
     font-size: 1rem;
     display: none;
-    /* Hidden by default */
 }
 
 .sub-card-container.active .most-popular-banner {
     display: block;
 }
 
-/* Header Radio area */
 .sub-card-header {
     display: flex;
     justify-content: space-between;
@@ -446,7 +425,6 @@ img {
     font-size: 0.9rem;
 }
 
-/* Active Body */
 .sub-card-body {
     display: none;
     padding: 0 20px 20px;
@@ -468,7 +446,6 @@ img {
     }
 }
 
-/* Fragrance Selection Grid */
 .section-label {
     font-size: 0.95rem;
     color: #444;
@@ -491,7 +468,6 @@ img {
     cursor: pointer;
     position: relative;
     border: 1px solid transparent;
-    /* Highlight on checked */
 }
 
 .frag-card:hover {
@@ -504,7 +480,6 @@ img {
     left: 10px;
     margin: 0;
     accent-color: #555;
-    /* Neutral radio color */
 }
 
 .frag-card img {
@@ -518,7 +493,6 @@ img {
     font-size: 0.8rem;
     color: #888;
     margin-left: 15px;
-    /* Offset for radio */
     text-align: left;
 }
 
@@ -535,23 +509,15 @@ img {
     text-transform: uppercase;
 }
 
-/* Fragrance Card Selection State */
-
-
-/* We can't easily style parent based on Input without :has selector (modern browsers only) */
-/* Using :has for enhancing, or JS if strictly needed. Minimal viable is accent color */
 .frag-card:has(input:checked) {
     background-color: #fff;
     border: 1px solid #ddd;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-
-/* What's Included */
 .included-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* 2 Big Boxes */
     gap: 15px;
     margin-bottom: 20px;
 }
@@ -587,7 +553,6 @@ img {
     object-fit: contain;
 }
 
-/* Sampler Group (3 small bottles) */
 .sampler-group {
     gap: 5px;
 }
@@ -596,7 +561,6 @@ img {
     height: 70px;
 }
 
-/* Pair Group (Double sub) */
 .pair-group {
     gap: 0px;
 }
@@ -605,8 +569,6 @@ img {
     height: 90px;
 }
 
-
-/* Checklist */
 .benefits-list li {
     font-size: 0.85rem;
     color: #555;
@@ -618,17 +580,13 @@ img {
 
 .check-green {
     color: #00C853;
-    /* Checkmark color */
     font-size: 0.9rem;
     font-weight: bold;
 }
 
-
-/* --- Collection Section --- */
 .collection-section {
     padding: 80px 0;
     background-color: #fff;
-    /* White background as per new image */
 }
 
 .collection-grid {
@@ -636,12 +594,10 @@ img {
     grid-template-columns: 1fr;
     gap: 60px;
     align-items: center;
-    /* Align vertically */
 }
 
 .collection-content h2 {
     font-family: var(--font-body);
-    /* Looks sans-serif bold in image */
     font-weight: 700;
     font-size: 2.5rem;
     color: var(--primary-green);
@@ -652,13 +608,11 @@ img {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    /* Space between cards */
 }
 
 .collection-accordion .accordion-item {
     border: 1px solid #ddd;
     border-radius: 8px;
-    /* Rounded corners */
     background: #fff;
     overflow: hidden;
     transition: all 0.2s ease;
@@ -666,7 +620,6 @@ img {
 
 .collection-accordion .accordion-item:first-child {
     border-top: 1px solid #ddd;
-    /* Reset from previous overrides if any */
 }
 
 .accordion-header {
@@ -679,11 +632,9 @@ img {
     font-size: 1.1rem;
     color: var(--primary-green);
     border-bottom: none;
-    /* No separator by default */
     background: #fff;
 }
 
-/* Acc icon styling */
 .acc-icon {
     font-size: 1.5rem;
     font-weight: 400;
@@ -705,20 +656,16 @@ img {
     padding-bottom: 25px;
 }
 
-/* Image styling */
 .collection-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-    /* "Little curve" */
     border: none;
-    /* "No border" */
     box-shadow: none;
     min-height: 500px;
 }
 
-/* Stats Section */
 .stats-section {
     background-color: var(--primary-green);
     padding: 60px 0;
@@ -736,8 +683,6 @@ img {
     font-weight: 700;
 }
 
-
-/* --- Comparison Table --- */
 .comparison-section {
     padding: 80px 0;
     text-align: center;
@@ -768,7 +713,6 @@ img {
     table-layout: fixed;
 }
 
-/* Headers */
 .feature-col {
     text-align: left;
     padding: 20px;
@@ -803,7 +747,6 @@ img {
     position: relative;
     background: #f9f9f9;
     border-radius: 10px;
-    /* Base radius */
 }
 
 .header-img-wrapper.round {
@@ -816,7 +759,6 @@ img {
     object-fit: cover;
 }
 
-/* Special styling for GTG image wrapper if needed, or stick to default */
 
 .brand-name {
     display: block;
@@ -835,7 +777,6 @@ img {
     font-weight: 400;
 }
 
-/* Body Rows */
 .comparison-table td {
     padding: 20px 10px;
     border-bottom: 1px solid #eee;
@@ -851,7 +792,6 @@ img {
     color: #555;
 }
 
-/* GTG Highlighted Column */
 .gtg-cell {
     background-color: #e6f0e6;
     border-left: 2px dotted #a8d5ba;
@@ -866,7 +806,6 @@ img {
     border-bottom-right-radius: 10px;
 }
 
-/* Icons */
 .icon-solid-check {
     display: inline-flex;
     align-items: center;
@@ -907,7 +846,6 @@ img {
     margin-top: 40px;
 }
 
-/* CTA */
 .btn-pill {
     background-color: var(--primary-green);
     color: #fff;
@@ -923,8 +861,6 @@ img {
     transform: translateY(-2px);
 }
 
-
-/* Responsive */
 @media (min-width: 992px) {
     .nav-desktop {
         display: block;
@@ -949,7 +885,7 @@ img {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
-/* --- Footer --- */
+
 .footer {
     background-color: var(--primary-green);
     color: #fff;
@@ -965,14 +901,13 @@ img {
     gap: 40px;
 }
 
-/* Footer Left */
 .footer-left {
-    flex: 2; /* Takes more space */
+    flex: 2;
     min-width: 300px;
 }
 
 .footer-logo {
-    font-family: var(--font-body); /* Bold sans-serif as per visual */
+    font-family: var(--font-body);
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 40px;
@@ -997,14 +932,12 @@ img {
 }
 .link-col a:hover { opacity: 1; text-decoration: underline; }
 
-/* Social Icons */
 .social-link {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* Footer Right (Newsletter) */
 .footer-right {
     flex: 1.5;
     min-width: 300px;
@@ -1036,7 +969,7 @@ img {
 .newsletter-input:focus { outline: none; border-color: #fff; }
 
 .btn-subscribe {
-    background-color: #8B5E3C; /* Brownish bronze color */
+    background-color: #8B5E3C;
     color: #fff;
     border: none;
     padding: 12px 25px;
@@ -1055,7 +988,6 @@ img {
 .newsletter-disclaimer a { text-decoration: underline; color: #fff; }
 
 
-/* Responsive Footer */
 @media (max-width: 992px) {
     .footer-content-new { flex-direction: column; }
     .footer-right { width: 100%; max-width: 500px; }
@@ -1067,9 +999,6 @@ img {
     .btn-subscribe { width: 100%; }
 }
 
-
-/* --- Animations --- */
-/* Base Animation Classes */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -1080,13 +1009,10 @@ img {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* Stagger Delays */
 .delay-100 { transition-delay: 0.1s; }
 .delay-200 { transition-delay: 0.2s; }
 .delay-300 { transition-delay: 0.3s; }
 
-/* Specific Load Animations (Keyframes) */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1101,7 +1027,7 @@ img {
 .hero-title {
     animation: fadeInUp 0.8s ease-out forwards;
     animation-delay: 0.2s;
-    opacity: 0; /* Initial state before animation */
+    opacity: 0;
 }
 .hero-tag {
     animation: fadeInUp 0.8s ease-out forwards;
@@ -1119,12 +1045,10 @@ img {
     opacity: 0;
 }
 
-/* Smooth Scroll */
 html {
     scroll-behavior: smooth;
 }
 
-/* Card Hovers */
 .sub-card-container {
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1140,7 +1064,6 @@ html {
     transform: translateY(-3px);
 }
 
-/* Collection Card Image Hover */
 .collection-image {
     overflow: hidden;
     border-radius: 20px;
